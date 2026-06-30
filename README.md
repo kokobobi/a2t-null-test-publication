@@ -35,7 +35,26 @@ All remote verification checks passed:
 
 ## How To Verify
 
-From the project workspace containing the verifier script:
+Preferred external verifier:
+
+```bash
+python3 scripts/verify_remote_bundle.py
+```
+
+Expected result:
+
+```text
+A2T remote content-publication verification: PASS
+chunk_count_ok: True
+all_chunks_ok: True
+bundle_sha256_ok: True
+bundle_size_ok: True
+git_bundle_verify_ok: True
+```
+
+See [`VERIFY.md`](VERIFY.md) for details. The verifier is self-contained: it uses only the Python standard library plus the local `git` executable.
+
+For the original project-workspace verifier:
 
 ```bash
 python3 scripts/a2t_verify_content_publication_bundle.py \
@@ -45,16 +64,10 @@ python3 scripts/a2t_verify_content_publication_bundle.py \
   --out generated/content_publication_remote_verification_20260630.json
 ```
 
-Expected result:
-
-```text
-content_publication_verified = true
-reconstructed_sha256 = 375a97bc4fcf3930d8f1505f5388de71d21d44ee4c26c5c86afd2a9bb3b6ac4c
-git_bundle_verify_ok = true
-```
-
 ## Review Materials In This Repository
 
+- [`VERIFY.md`](VERIFY.md): standalone remote bundle verification instructions.
+- [`scripts/verify_remote_bundle.py`](scripts/verify_remote_bundle.py): self-contained verifier for external reviewers.
 - [`AUDIT_SUMMARY.md`](AUDIT_SUMMARY.md): human-readable seven-item audit summary.
 - [`docs/MODE_A_TO_MODE_B_RATIONALE.md`](docs/MODE_A_TO_MODE_B_RATIONALE.md): governance rationale for closing item 6 under Mode B rather than Mode A.
 - [`data/a2t_remote_publication_status_after_upload_20260630.json`](data/a2t_remote_publication_status_after_upload_20260630.json): public-safe machine-readable status summary.
