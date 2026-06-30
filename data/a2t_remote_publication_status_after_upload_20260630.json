@@ -1,0 +1,33 @@
+{
+  "claim_boundary": "Remote content-publication is verified as a transport of the checksum-verified local git bundle; it is not a full remote git mirror. Overall seven-item goal remains incomplete until real H1 hardware events, measured calibration artifacts, and blind custody are supplied and validated.",
+  "content_publication": {
+    "all_chunks_ok": true,
+    "bundle_sha256_ok": true,
+    "bundle_size_ok": true,
+    "chunk_count_ok": true,
+    "content_publication_verified_from_remote_raw_urls": true,
+    "expected_bundle_sha256": "375a97bc4fcf3930d8f1505f5388de71d21d44ee4c26c5c86afd2a9bb3b6ac4c",
+    "file_count": 20,
+    "git_bundle_verify_ok": true,
+    "local_publication_head": "66694666bb0b9f13aa7dca2ad62cba8fe36ad643",
+    "raw_base_url": "https://raw.githubusercontent.com/kokobobi/hello-world/main/data/content_publication_bundle_20260630/",
+    "reconstructed_sha256": "375a97bc4fcf3930d8f1505f5388de71d21d44ee4c26c5c86afd2a9bb3b6ac4c",
+    "remote_manifest_url": "https://raw.githubusercontent.com/kokobobi/hello-world/main/data/content_publication_bundle_20260630/a2t_content_publication_bundle_manifest_20260630.json",
+    "total_bytes": 16975711
+  },
+  "date": "2026-06-30",
+  "repository_full_name": "kokobobi/hello-world",
+  "schema": "a2t_public_remote_publication_status_v1",
+  "seven_item_goal_audit": {
+    "completed_item_count": 6,
+    "goal_complete": false,
+    "item_6_remote_publication_complete": true,
+    "item_6_remote_publication_mode": "content_publication_bundle",
+    "item_6_remote_publication_status": "content_publication_verified",
+    "item_7_real_h1_complete": false,
+    "remaining_requirements": [
+      "Real H1 hardware package: provide real apparatus events, measured calibration artifacts, and blind custody."
+    ],
+    "total_item_count": 7
+  }
+}
